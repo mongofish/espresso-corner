@@ -1,0 +1,24 @@
+<head>
+  <title>Espresso Corner</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div ng-app="app" ng-cloak layout="column">
+  	<md-toolbar ng-controller="navController as vm">
+      <div class="md-toolbar-tools">
+      	Espresso Corner
+  		  <md-nav-bar nav-bar-aria-label="navigation links">
+    			<md-nav-item md-nav-sref="beans">Beans</md-nav-item>
+          <md-nav-item md-nav-sref="today">Today's Brew</md-nav-item>
+    			<md-nav-item md-nav-sref="stats">Stats</md-nav-item>
+      	</md-nav-bar>
+    	<div flex="auto"></div>
+    	<div class="nav-bar-date">{{vm.date |amDateFormat:'dddd, MMMM Do YYYY'}}</div>
+      </div>
+    </md-toolbar>
+    <md-content layout-padding layout-align="center">
+    	<ui-view></ui-view>
+    <md-content>
+  </div>
+</body>

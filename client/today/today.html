@@ -1,0 +1,19 @@
+<div>
+	<md-card class="md-block">
+    	<bean-card-content bean="vm.todaysBean"></bean-card-content>
+    </md-card>
+    <md-divider></md-divider>
+    <div layout="row" layout-align="space-around center">
+    	<form flex="80">
+    		<md-input-container>
+				<span class="label">I made a</span>
+				<md-button ng-repeat="type in vm.beverageType" class="md-raised" ng-class="{'md-primary':vm.selectType===type}" ng-click="vm.selectType=type">{{type}}</md-button>   
+			</md-input-container>
+			<md-slider-container>
+				<span class="label">Rating</span>
+      			<md-slider flex md-discrete ng-model="vm.rating" step="1" min="1" max="5" aria-label="rating">
+      			</md-slider>
+			</md-slider-container>
+    	</form>
+   	</div>
+</div>

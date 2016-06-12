@@ -1,0 +1,46 @@
+<div>
+	<div layout="row" ng-hide="vm.showAdd" class="bean-action">
+    	<div flex="auto"></div>
+        <div>
+        	<md-button ng-click="vm.showAdd=true" class="md-fab" aria-label="New Beans">
+				<md-icon md-font-library="material-icons" class="md-light md-48">control_point</md-icon>
+        	</md-button>
+        </div>
+	</div>
+	<div layout="row" layout-align="center" ng-show="vm.showAdd">
+		<form flex="90">
+			<md-input-container class="md-block">
+		        <label>Name</label>
+		        <input ng-model="vm.newBean.name">
+		    </md-input-container>
+			<div layout="row">
+			    <md-input-container class="md-block" flex="70">
+			        <label>Origins</label>
+			        <input ng-model="vm.newBean.origins" ng-list>
+			    </md-input-container>
+				<md-input-container class="md-block" flex="30">
+			        <label>Roast</label>
+			        <md-select ng-model="vm.newBean.roast">
+              			<md-option ng-repeat="roast in vm.roasts" value="{{roast}}">{{roast}}</md-option>
+            		</md-select>
+			    </md-input-container>
+			</div>
+		    <md-input-container class="md-block">
+		        <label>Description</label>
+		        <textarea ng-model="vm.newBean.description"></textarea>
+		    </md-input-container>
+		    <md-button ng-click="vm.add()" class="md-raised md-primary md-button">Add</md-button>
+		</form>
+	</div>
+	<div layout="row" layout-align="center" layout-wrap>
+		<md-card ng-repeat="bean in vm.beans| orderBy: '-lastMod' track by $index" flex="30" class="md-block">
+			<div class="bean-card-header">
+    			<img ng-src="/image/card-header.jpg" class="md-card-image">
+    		</div>
+    		<bean-card-content bean="bean"></bean-card-content>
+	        <md-card-actions layout="row" layout-align="end center">
+	   			<md-button ui-sref="today({beanId: bean._id})" class="md-raised md-primary md-button">Pick</md-button>
+	        </md-card-actions>
+	    </md-card>
+	</div>
+</div>
