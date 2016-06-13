@@ -3,7 +3,7 @@
     <span class="md-headline">{{vm.bean.name}}</span>
     <span class="md-subhead">
     	<div>
-    		Origins: <span md-colors="{color:'primary'}" class="badge" ng-repeat="origin in vm.bean.origins track by $index">{{origin}}</span>
+    		Origins: <span class="badge" ng-repeat="origin in vm.bean.origins track by $index">{{origin}}</span>
     	</div>
     	<div>Roast: <strong>{{vm.bean.roast}}</strong></div>
     	<div>{{vm.bean.lastMod | amTimeAgo}}</div>

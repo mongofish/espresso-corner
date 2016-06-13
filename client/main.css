@@ -17,6 +17,10 @@
 	color: white !important;
 }
 
+md-divider {
+	padding: 10px 10px;
+}
+
 span.label {
 	display: inline-block;
 	width: 100px;
@@ -33,7 +37,12 @@ span.label {
     border-radius: 16px;
     max-width: 100%;
     position: relative;
-    padding-right: 15px;
+    padding: 5px 10px;
+    font-size: 80%;
+    font-weight: 500;
+    margin: 0 5px;
+    color: white;
+    background-color: grey;
 }
 
 .bean-action {

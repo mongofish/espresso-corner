@@ -19,8 +19,8 @@ class BeansController {
 
   add() {
   	Beans.insert(this.newBean);
- 	this.showAdd = false;
-	this.newBean = {};  
+ 	  this.showAdd = false;
+	  this.newBean = {};  
   }
 }
 

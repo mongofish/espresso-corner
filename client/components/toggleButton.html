@@ -1,0 +1,1 @@
+<md-button ng-repeat="type in vm.values" ng-init="vm.ngModel=vm.values[0]" class="md-raised" ng-class="{'md-primary':vm.ngModel===type}" ng-click="vm.ngModel=type">{{type}}</md-button>
