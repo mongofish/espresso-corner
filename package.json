@@ -1,6 +1,11 @@
 {
   "name": "espresso-corner",
   "private": true,
+  "version": "0.0.1",
+  "engines": {
+    "node": "4.x",
+    "npm": "2.1.x"
+  },
   "scripts": {
     "start": "meteor run"
   },
