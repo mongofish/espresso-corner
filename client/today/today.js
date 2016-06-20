@@ -11,7 +11,10 @@ let todayModule = angular.module('app.today', [
 
   $stateProvider
     .state('today', {
-      url: '/today/:beanId',
+      url: '/today',
+      params: {
+      	beanId: null
+      },
       templateUrl: template,
       controller,
       controllerAs: 'vm'
