@@ -27,6 +27,7 @@ angular.module('app', [
 
   $urlRouterProvider.otherwise('/beans');
 }).controller('navController', function($state, $rootScope) {
+  "ngInject";
 	this.date = new Date();
 
 	this.goto = function(route) {
