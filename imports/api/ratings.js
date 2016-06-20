@@ -14,7 +14,7 @@ Ratings.attachSchema(new SimpleSchema({
         max: 30
     },
     bean: {
-        type: Beans,
+        type: String,
         label: 'Bean',
     },
     lastMod: {

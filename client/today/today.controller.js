@@ -16,7 +16,7 @@ class TodayController {
         return Beans.findOne($stateParams.beanId ? {_id: $stateParams.beanId}: {}, {sort: {lastMod: -1}});
       },
       ratings() {
-        return Ratings.find({lastMod: {$gte: today.toDate(), $lt: tomorrow.toDate()}});
+        return Ratings.find({bean: $stateParams.beanId, lastMod: {$gte: today.toDate(), $lt: tomorrow.toDate()}});
       }
     });
 
@@ -25,7 +25,7 @@ class TodayController {
   }
 
   rate() {
-    this.rating.bean = this.todaysBean;
+    this.rating.bean = this.todaysBean._id;
     Ratings.insert(this.rating);
     this.$state.reload(this.$state.current.name, this.$stateParams);
   }
