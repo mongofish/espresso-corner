@@ -1,16 +1,23 @@
-#Espresso Corner#
+# Espresso Corner
+
 Meteor app with angular and material design
 
-##Getting started##
-###Install Meteor###
+## Getting started
+
+### Install Meteor
+
 `curl https://install.meteor.com/ | sh`
+
 https://www.meteor.com/install
 
-###Download dependencies###
+### Download dependencies
+
 `meteor install`
+
 `npm install`
 
-###Run app###
+### Run app
+
 `meteor`
 
 ![Beans](https://raw.githubusercontent.com/mongofish/espresso-corner/master/screenshot-beans.png)
